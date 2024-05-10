@@ -38,7 +38,7 @@ function NavBar() {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <NavLink>Login</NavLink>
+                    <NavLink to="/login">Login</NavLink>
                     <NavLink>Register</NavLink>
 
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar ">

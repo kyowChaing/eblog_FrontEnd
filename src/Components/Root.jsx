@@ -1,13 +1,14 @@
 import { Outlet } from "react-router-dom"
 import NavBar from "./HomePage/NavBar/NavBar"
-import Footer from "./HomePage/Footer/Footer"
+import FooterSection from "./HomePage/Footer/FooterSection"
+
 
 function Root() {
   return (
    <>
    <NavBar></NavBar>
    <Outlet></Outlet>
-   <Footer></Footer>
+    <FooterSection></FooterSection>
    </>
   )
 }
