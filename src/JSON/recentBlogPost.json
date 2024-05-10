@@ -1,0 +1,39 @@
+[
+    {
+      "Title": "Python",
+      "Image": "https://i.ibb.co/sJVDdy1/images.jpg",
+      "ShortDescription": "Python is a high-level, interpreted programming language known for its simplicity and readability. It is widely used for web development, data analysis, artificial intelligence, and more.",
+      "Category": "General Purpose"
+    },
+    {
+      "Title": "JavaScript",
+      "Image": "https://i.ibb.co/sJVDdy1/images.jpg",
+      "ShortDescription": "JavaScript is a versatile scripting language primarily used for web development. It enables interactive web pages and is commonly used alongside HTML and CSS.",
+      "Category": "Web Development"
+    },
+    {
+      "Title": "Java",
+      "Image": "https://i.ibb.co/sJVDdy1/images.jpg",
+      "ShortDescription": "Java is a popular object-oriented programming language known for its platform independence. It is widely used for building enterprise-scale applications, mobile apps, and web servers.",
+      "Category": "Enterprise Development"
+    },
+    {
+      "Title": "C++",
+      "Image": "https://i.ibb.co/sJVDdy1/images.jpg",
+      "ShortDescription": "C++ is a powerful, high-performance programming language used for system/software development, game development, and performance-critical applications. It offers both low-level and high-level features.",
+      "Category": "System & Game Development"
+    },
+    {
+      "Title": "Ruby",
+      "Image": "https://i.ibb.co/sJVDdy1/images.jpg",
+      "ShortDescription": "Ruby is a dynamic, object-oriented programming language known for its simplicity and productivity. It is often used for web development, prototyping, and automation.",
+      "Category": "Web Development"
+    },
+    {
+      "Title": "Swift",
+      "Image": "https://i.ibb.co/sJVDdy1/images.jpg",
+      "ShortDescription": "Swift is a modern, powerful programming language developed by Apple for iOS, macOS, watchOS, and tvOS app development. It combines performance with safety and ease of use.",
+      "Category": "Mobile Development"
+    }
+  ]
+  
