@@ -1,0 +1,7 @@
+.bgimg{
+    background-image: url('../../../assets/hero.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    opacity: 0.9;
+
+}
