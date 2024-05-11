@@ -1,12 +1,14 @@
 import { Outlet } from "react-router-dom"
-import NavBar from "./HomePage/NavBar/NavBar"
 import FooterSection from "./HomePage/Footer/FooterSection"
+import NavBar from "./HomePage/NavBar/NavBar"
+
+
 
 
 function Root() {
   return (
    <>
-   <NavBar></NavBar>
+    <NavBar></NavBar>
    <Outlet></Outlet>
     <FooterSection></FooterSection>
    </>

@@ -1,13 +1,8 @@
 import { Banner, BannerCollapseButton, Button, Label, TextInput } from "flowbite-react";
 import { HiX } from "react-icons/hi";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
 import { Modal } from "flowbite-react";
 import { useState } from "react";
 import { HiOutlineExclamationCircle } from "react-icons/hi";
-
-// const notify = () =>toast.success("Thank you for subscribing to our newsletter !");
 
 
 
@@ -21,7 +16,6 @@ function NewsLetter() {
     return (
         <>
             <Banner className=" py-5">
-                {/* <ToastContainer /> */}
                 <div className="flex w-full items-center justify-between bg-gray-50 p-4 dark:border-gray-600 dark:bg-gray-700">
                     <div className="mx-auto flex w-full shrink-0 items-center sm:w-auto">
                         <div className=" text-center">
@@ -50,9 +44,6 @@ function NewsLetter() {
                         Thank you for subscribing to our newsletter !
                         </h3>
                         <div className="flex justify-center gap-4">
-                            {/* <Button color="failure" onClick={() => setOpenModal(false)}>
-                                {"Yes, I'm sure"}
-                            </Button> */}
                             <Button color="gray" onClick={() => setOpenModal(false)}>
                                 Go Back
                             </Button>

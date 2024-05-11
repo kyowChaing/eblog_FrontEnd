@@ -1,4 +1,7 @@
 import { Button, Card, Checkbox, Label, TextInput } from "flowbite-react";
+import { Link } from "react-router-dom";
+import { FcGoogle } from "react-icons/fc";
+import { BsGithub } from "react-icons/bs";
 
 
 function LogIn() {
@@ -23,7 +26,17 @@ function LogIn() {
           <Checkbox id="remember" />
           <Label htmlFor="remember">Remember me</Label>
         </div>
-        <Button type="submit">Submit</Button>
+        <Button type="submit">Log In</Button>
+        <div className="flex justify-center pb-2"> Or SignUp Using </div>
+          <div className="social-login flex justify-center gap-8">
+            <Link><button type="button" onClick=''> <FcGoogle className=" w-10 h-10" /> </button></Link>
+            <Link><button type="button" onClick=''><BsGithub className=" w-10 h-10" /></button></Link>
+          </div>
+          <div className="register-link">
+            Don't have an account?
+           
+            <Link to="/register"><button type="button" className=" text-xl font-medium pl-3 text-lime-800"> Register here</button> </Link>
+          </div>
       </form>
     </Card>
    </div>
