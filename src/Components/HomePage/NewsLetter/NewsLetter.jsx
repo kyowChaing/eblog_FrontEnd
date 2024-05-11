@@ -7,11 +7,12 @@ import { HiOutlineExclamationCircle } from "react-icons/hi";
 
 
 function NewsLetter() {
-    const [openModal, setOpenModal] = useState(true);
+    const [openModal, setOpenModal] = useState(false);
 
-    const handleSubmit=(event)=>{
+    const handleSubmit=event=>{
         event.preventDefault();
         setOpenModal(true);
+    
     }
     return (
         <>
@@ -27,7 +28,7 @@ function NewsLetter() {
                 </div>
                 <div className="flex w-full items-center justify-between border-b border-gray-200 bg-gray-50 p-4 dark:border-gray-600 dark:bg-gray-700">
                     <div className="mx-auto flex w-full shrink-0 items-center sm:w-auto">
-                        <form onSubmit={() => handleSubmit} className="flex w-full flex-col items-center md:flex-row md:gap-x-3">
+                        <form onSubmit={handleSubmit} className="flex w-full flex-col items-center md:flex-row md:gap-x-3">
                             <TextInput id="email" placeholder="Enter your email" required type="email" />
                             <Button type="submit" >Subscribe</Button>
                         </form>

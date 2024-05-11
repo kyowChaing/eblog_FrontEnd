@@ -5,16 +5,20 @@ import { BsGithub } from "react-icons/bs";
 
 
 function LogIn() {
+  const handleLogin = event=>{
+    event.preventDefault();
+
+  }
   return (
    <>
    <div className="flex justify-center border-2">
    <Card className=" w-4/5 md:w-2/5">
-      <form className="flex flex-col gap-4">
+      <form onSubmit={handleLogin} className="flex flex-col gap-4">
         <div>
           <div className="mb-2 block">
             <Label htmlFor="email1" value="Your email" />
           </div>
-          <TextInput id="email1" type="email" placeholder="name@flowbite.com" required />
+          <TextInput id="email1" type="email" placeholder="user@gmail.com" required />
         </div>
         <div>
           <div className="mb-2 block">
