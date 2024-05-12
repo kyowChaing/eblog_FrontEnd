@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import {Card, Button, Spinner } from "flowbite-react";
 import {
@@ -9,8 +8,8 @@ import {
 
 const queryClient = new QueryClient()
 
-
-function RecentBlogPosts() {
+ 
+function AllBlogs() {
     return (
         <>
             <QueryClientProvider client={queryClient}>
@@ -18,7 +17,9 @@ function RecentBlogPosts() {
             </QueryClientProvider>
         </>
     )
+
 }
+
 
 function Example() {
     const { isPending, error, data } = useQuery({
@@ -39,7 +40,7 @@ function Example() {
         </div>
       );
 
-    if (error) return 'An error has occurred ' 
+    if (error) return 'An error has occurred: ' + error.message
 
     return (
         <div className=" grid border-zinc-100 p-5 rounded-lg gap-2 lg:grid-cols-3 md:grid-cols-2 justify-evenly">
@@ -58,8 +59,6 @@ function Example() {
                         <p className="font-normal text-gray-700 dark:text-gray-400">
                             {blogpost.ShortDescription.slice(0, 100)}....
                         </p>
-                        <h3 className=' text-lg'>Category: <span className=' font-semibold'>{blogpost.Category}</span></h3>
-                        
 
                         <div className="mt-4 flex space-x-3 lg:mt-6">
                             <Link>
@@ -87,4 +86,4 @@ function Example() {
     )
 }
 
-export default RecentBlogPosts
+export default AllBlogs

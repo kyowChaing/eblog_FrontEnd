@@ -1,39 +1,46 @@
-[
+
+  [
     {
       "Title": "Python",
-      "Image": "https://i.ibb.co/sJVDdy1/images.jpg",
-      "ShortDescription": "Python is a high-level, interpreted programming language known for its simplicity and readability. It is widely used for web development, data analysis, artificial intelligence, and more.",
-      "Category": "General Purpose"
+      "Image": "https://i.ibb.co/fSN9Nz8/python.jpg",
+      "ShortDescription": "Python is a high-level programming language known for its simplicity and readability. It is widely used in web development, scientific computing, artificial intelligence, and data analysis.",
+      "LongDescription": "Python is a versatile, interpreted language with dynamic semantics. It is known for its simple and easy-to-learn syntax, making it an ideal language for beginners. Python supports multiple programming paradigms, including procedural, object-oriented, and functional programming. Its extensive standard library and active community make it a powerful tool for various applications. Python's readability and expressiveness contribute to its popularity among developers worldwide.",
+      "Category": "General Purpose Programming Languages"
     },
     {
       "Title": "JavaScript",
-      "Image": "https://i.ibb.co/sJVDdy1/images.jpg",
-      "ShortDescription": "JavaScript is a versatile scripting language primarily used for web development. It enables interactive web pages and is commonly used alongside HTML and CSS.",
+      "Image": "https://i.ibb.co/8XnJZqy/JS.png",
+      "ShortDescription": "JavaScript is a lightweight, interpreted programming language known for its versatility and compatibility with web browsers. It is widely used for building interactive websites and web applications.",
+      "LongDescription": "JavaScript is a dynamic scripting language primarily used for client-side web development. It enables interactive web pages and is essential for modern web development. JavaScript is compatible with all major web browsers, making it a universal language for web development. With frameworks like React, Angular, and Vue.js, JavaScript has extended its capabilities to server-side development as well. Its asynchronous nature and event-driven architecture make it suitable for building responsive and dynamic web applications.",
       "Category": "Web Development"
     },
     {
       "Title": "Java",
-      "Image": "https://i.ibb.co/sJVDdy1/images.jpg",
-      "ShortDescription": "Java is a popular object-oriented programming language known for its platform independence. It is widely used for building enterprise-scale applications, mobile apps, and web servers.",
-      "Category": "Enterprise Development"
+      "Image": "https://i.ibb.co/G5FBDjK/java.jpg",
+      "ShortDescription": "Java is a powerful, object-oriented programming language known for its platform independence and robustness. It is widely used for building enterprise-level applications and Android mobile apps.",
+      "LongDescription": "Java is a general-purpose programming language that follows the 'write once, run anywhere' philosophy. It is designed to be platform-independent, making it suitable for developing cross-platform applications. Java's object-oriented nature, strong typing, and automatic memory management contribute to its robustness and reliability. It is widely used in enterprise-level applications, web development, and Android mobile app development. Java's extensive ecosystem, including frameworks like Spring and Hibernate, further enhances its capabilities.",
+      "Category": "General Purpose Programming Languages"
     },
     {
       "Title": "C++",
-      "Image": "https://i.ibb.co/sJVDdy1/images.jpg",
-      "ShortDescription": "C++ is a powerful, high-performance programming language used for system/software development, game development, and performance-critical applications. It offers both low-level and high-level features.",
-      "Category": "System & Game Development"
-    },
-    {
-      "Title": "Ruby",
-      "Image": "https://i.ibb.co/sJVDdy1/images.jpg",
-      "ShortDescription": "Ruby is a dynamic, object-oriented programming language known for its simplicity and productivity. It is often used for web development, prototyping, and automation.",
-      "Category": "Web Development"
+      "Image": "https://i.ibb.co/wch0mHM/cpp.jpg",
+      "ShortDescription": "C++ is a powerful, high-performance programming language known for its efficiency and versatility. It is widely used in system programming, game development, and performance-critical applications.",
+      "LongDescription": "C++ is an extension of the C programming language with added features like classes and objects. It is a statically typed language that offers high performance and low-level memory manipulation capabilities. C++ is widely used in system programming, game development, and performance-critical applications where efficiency is paramount. Its support for object-oriented programming, generic programming, and template metaprogramming makes it a versatile language for various domains. Despite its complexity, C++ remains a popular choice for developers seeking high-performance applications.",
+      "Category": "General Purpose Programming Languages"
     },
     {
       "Title": "Swift",
-      "Image": "https://i.ibb.co/sJVDdy1/images.jpg",
-      "ShortDescription": "Swift is a modern, powerful programming language developed by Apple for iOS, macOS, watchOS, and tvOS app development. It combines performance with safety and ease of use.",
-      "Category": "Mobile Development"
+      "Image": "https://i.ibb.co/z2wXnKs/swift.jpg",
+      "ShortDescription": "Swift is a modern, powerful programming language developed by Apple for building iOS, macOS, watchOS, and tvOS applications. It is known for its safety, speed, and expressiveness.",
+      "LongDescription": "Swift is a statically typed language designed to be fast and easy to use. It offers modern features like optionals, generics, and type inference, making code more expressive and less prone to errors. Swift is the preferred language for developing iOS, macOS, watchOS, and tvOS applications, replacing Objective-C in many cases. It is interoperable with Objective-C, allowing developers to leverage existing codebases and libraries. Swift's safety features, like automatic memory management and type safety, enhance application security and stability.",
+      "Category": "Mobile App Development"
+    },
+    {
+      "Title": "Ruby",
+      "Image": "https://i.ibb.co/VVqY8gW/ruby.jpg",
+      "ShortDescription": "Ruby is a dynamic, object-oriented programming language known for its simplicity and productivity. It is widely used for web development, particularly with the Ruby on Rails framework.",
+      "LongDescription": "Ruby is a high-level programming language designed for programmer productivity and happiness. It features elegant syntax and dynamic typing, making it easy to read and write code. Ruby is often used for web development, thanks to the Ruby on Rails framework, which follows the 'convention over configuration' principle. Ruby's focus on developer happiness, combined with its powerful metaprogramming capabilities, has led to its popularity among startups and established companies alike. It is also used for scripting, automation, and prototyping.",
+      "Category": "Web Development"
     }
   ]
   

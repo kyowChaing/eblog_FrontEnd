@@ -8,27 +8,43 @@ import LogIn from './Components/User/LogIn.jsx'
 import WishList from './Components/WishList/WishList.jsx'
 import FeaturedBlogs from './Components/FeaturedBlogs/FeaturedBlogs.jsx'
 import Error from './Components/Error.jsx'
+import AuthProvider from './Components/Providers/AuthProvider.jsx'
+import Register from './Components/User/Register.jsx'
+import AllBlogs from './Components/AllBlogs/AllBlogs.jsx'
+import AddBlog from './Components/AddBlog/AddBlog.jsx'
 const router = createBrowserRouter([
   {
-    path:'/',
-    element:<Root></Root>,
-    errorElement:<Error></Error>,
-    children:[
+    path: '/',
+    element: <Root></Root>,
+    errorElement: <Error></Error>,
+    children: [
       {
-        path:'/',
-        element:<HomePage></HomePage>
+        path: '/',
+        element: <HomePage></HomePage>
       },
       {
-        path:'/featuredblogs',
-        element:<FeaturedBlogs></FeaturedBlogs>
+        path: '/featuredblogs',
+        element: <FeaturedBlogs></FeaturedBlogs>
       },
       {
-        path:'/wishlist',
-        element:<WishList></WishList>
+        path: '/wishlist',
+        element: <WishList></WishList>
       },
       {
-        path:'/login',
-        element:<LogIn></LogIn>
+        path: '/signup',
+        element: <Register></Register>
+      },
+      {
+        path: '/login',
+        element: <LogIn></LogIn>
+      },
+      {
+        path: '/allblogs',
+        element: <AllBlogs></AllBlogs>
+      },
+      {
+        path: '/addblog',
+        element: <AddBlog></AddBlog>
       },
     ]
   }
@@ -37,6 +53,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
+
   </React.StrictMode>,
 )
