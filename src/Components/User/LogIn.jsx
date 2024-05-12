@@ -1,10 +1,11 @@
-import { Button, Card, Checkbox, Label, TextInput } from "flowbite-react";
-import { Link } from "react-router-dom";
+
 import { FcGoogle } from "react-icons/fc";
-import { BsGithub } from "react-icons/bs";
-import { useContext } from "react";
-import { AuthContext } from "../Providers/AuthProvider";
+import { useContext, useEffect, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import Swal from 'sweetalert2';
 import bgimg from "./img/loginbg.jpg"
+import { AuthContext } from "../Providers/AuthProvider";
+import { Button, Card, Checkbox, Label, TextInput } from "flowbite-react";
 
 
 
@@ -12,34 +13,89 @@ import bgimg from "./img/loginbg.jpg"
 
 function LogIn() {
 
-const {user,createUser,signInUser,logOut,googleLogin,loading,setReload}=useContext(AuthContext);
+  const {user, signInUser,googleLogin,setReload} = useContext(AuthContext);
+ 
+  console.log( 'user info',user)
+  const navigate = useNavigate();
+  const location=useLocation();
 
-  const handleLogin = event=>{
+  
+
+
+  const handleLogin = async(event)=>{
     event.preventDefault();
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
+    const data = {email,password}
 
-    signInUser(email,password);
+    try {
 
+      await signInUser(data.email, data.password);
+
+      setTimeout(() => {
+        
+        Swal.fire({
+          title: `Welcome to EBLOG`,
+          text: 'Login successful',
+          icon: 'success',
+          confirmButtonText: 'OK'
+        })
+        
+      }, 300);
+      navigate(location?.state || '/');
+
+      } catch (error) {
+      Swal.fire({
+        title: 'Please Insert Correct User Email and Password',
+        text: 'Do you want to continue',
+        icon: 'error',
+        confirmButtonText: 'OK'
+      })
+      reset();
+    }
   }
 
+ 
   const handleGoogleLogin=async (data) => {
     try {
       await googleLogin();
+
       // Handle successful login
-      
       setTimeout(() => {
-        toast.success('Login With Google successful');
+        Swal.fire({
+          title: 'Welcome to EBLOG',
+          text: 'Log in Success with Google',
+          icon: 'success',
+          confirmButtonText: 'OK'
+        })
         
       }, 300);
 
-      // navigate('${locationState}'|| '/');
+      
       navigate(location?.state || '/');
+
+      // fetch('http://localhost:5000/user',{
+      //       method:'POST',
+      //       headers:{'content-type':'application/json'},
+      //       body:  JSON.stringify(data)
+      //   })
+      //   .then(res=>res.json())
+      //   .then(data=>{
+      //     // console.log(data);
+         
+        
+      //   })
       
     } catch (error) {
       // Handle login error
-      toast.error('Login failed: ' + error.message);
+    
+      Swal.fire({
+        title: 'Ops Sorry!',
+        text: 'Lgo in Fail .Pleas Check Connection',
+        icon: 'error',
+        confirmButtonText: 'OK'
+      })
     }
   };
 

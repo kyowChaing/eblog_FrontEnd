@@ -50,15 +50,15 @@ function Example() {
                     <Card
                         className="max-w-sm"
                         imgAlt=" "
-                        imgSrc={blogpost.Image}
+                        imgSrc={blogpost.image}
                     >
                         <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                            {blogpost.Title}
+                            {blogpost.title}
                         </h5>
                         <p className="font-normal text-gray-700 dark:text-gray-400">
-                            {blogpost.ShortDescription.slice(0, 100)}....
+                            {blogpost.shortDescription.slice(0, 100)}....
                         </p>
-                        <h3 className=' text-lg'>Category: <span className=' font-semibold'>{blogpost.Category}</span></h3>
+                        <h3 className=' text-lg'>Category: <span className=' font-semibold'>{blogpost.category}</span></h3>
                         
 
                         <div className="mt-4 flex space-x-3 lg:mt-6">

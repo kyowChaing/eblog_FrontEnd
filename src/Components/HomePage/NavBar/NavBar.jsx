@@ -35,7 +35,7 @@ function NavBar() {
             // Handle successful login
 
             setTimeout(() => {
-                toast.success('Log Out successful');
+                // toast.success('Log Out successful');
 
             }, 300);
 

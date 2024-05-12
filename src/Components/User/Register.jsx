@@ -75,23 +75,8 @@ function Register() {
         })
         .then(res=>res.json())
         .then(data=>{
-          console.log(data);
-            // if(data.insertedId){
-            //     Swal.fire({
-            //         title: 'Craft Item Added Success',
-            //         text: '',
-            //         icon: 'success',
-            //         confirmButtonText: 'OK'
-            //       })  
-            // }else{
-            //     Swal.fire({
-            //         title: 'Craft Item Added Success',
-            //         text: '',
-            //         icon: 'error',
-            //         confirmButtonText: 'OK'
-            //       })  
-            // }
-
+          // console.log(data);
+        
         })
   };
 
