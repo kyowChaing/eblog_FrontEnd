@@ -13,7 +13,7 @@ function AllBlogs() {
     return (
         <>
             <QueryClientProvider client={queryClient}>
-                <Example />
+                <Blogs/>
             </QueryClientProvider>
         </>
     )
@@ -21,7 +21,7 @@ function AllBlogs() {
 }
 
 
-function Example() {
+function Blogs() {
     const { isPending, error, data } = useQuery({
         queryKey: ['repoData'],
         queryFn: () =>

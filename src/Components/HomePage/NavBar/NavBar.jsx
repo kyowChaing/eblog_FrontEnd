@@ -14,6 +14,7 @@ import {
     NavbarLink,
     NavbarToggle,
 } from "flowbite-react";
+import Swal from "sweetalert2";
 
 import logo from '../../../../public/logo.png'
 
@@ -35,13 +36,23 @@ function NavBar() {
             // Handle successful login
 
             setTimeout(() => {
-                // toast.success('Log Out successful');
+                Swal.fire({
+                    title: "Log Out successful",
+                    text: "Thankyou for with us",
+                    icon: "success",
+                    confirmButtonText: "OK",
+                  });
 
             }, 300);
 
         } catch (error) {
-            setError('logout', { type: 'manual', message: error.message });
-            toast.error('Log Out failed: ' + error.message);
+            // setError('logout', { type: 'manual', message: error.message });
+            Swal.fire({
+                title: "Ops Sorry! Log Out failed ",
+                text: "Pleas Check Connection",
+                icon: "error",
+                confirmButtonText: "OK",
+              });
         }
     };
 
@@ -49,7 +60,7 @@ function NavBar() {
         <>
 
             <Navbar fluid rounded>
-                <NavbarBrand href="https://flowbite-react.com">
+                <NavbarBrand href="/">
                     <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
                         <div className='flex justify-center items-center gap-1'><img src={logo} alt="" /> <span>eblog</span></div>
                         
