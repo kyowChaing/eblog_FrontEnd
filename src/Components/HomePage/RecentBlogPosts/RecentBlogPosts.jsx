@@ -90,7 +90,7 @@ function Example() {
     const firstSixItems = data.slice(0, 6);
 
     return (
-        <div className=" grid border-zinc-100 p-5 rounded-lg gap-2 lg:grid-cols-3 md:grid-cols-2 justify-evenly">
+        <div className=" grid border-zinc-100 p-5 rounded-lg gap-2 lg:grid-cols-3 md:grid-cols-2 place-items-center">
             {
                 firstSixItems.map(blogpost => (
 
