@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useContext, useRef } from 'react';
 import { Banner, BannerCollapseButton, Button, Label, TextInput } from "flowbite-react";
 import { Modal } from "flowbite-react";
 import { useState } from "react";
@@ -6,7 +6,9 @@ import { useState } from "react";
 
 
 
+
 function NewsLetter() {
+  
     const [openModal, setOpenModal] = useState(false);
     const formRef = useRef(null);
 

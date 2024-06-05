@@ -105,6 +105,10 @@ function NavBar() {
                     <NavbarLink className={selectedItem === 'allblogs' ? 'active' : ''} onClick={() => handleItemClick('allblogs')} href="/allblogs">All Blogs</NavbarLink>
                     <NavbarLink className={selectedItem === 'featuredblogs' ? 'active' : ''} onClick={() => handleItemClick('featuredblogs')} href="/featuredblogs">Featured Blogs</NavbarLink>
                     <NavbarLink className={selectedItem === 'wishlist' ? 'active' : ''} onClick={() => handleItemClick('wishlist')} href="/wishlist">Wishlist</NavbarLink>
+                   {/* { user && 
+                    <NavbarLink className={selectedItem === 'wishlist' ? 'active' : ''} onClick={() => handleItemClick('wishlist')} href="/wishlist">Update Blog</NavbarLink>
+                   } */}
+                   
                 </NavbarCollapse>
             </Navbar>
         </>

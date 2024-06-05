@@ -25,14 +25,16 @@ function Register() {
     try {
       const regexUpper = /[A-Z]/;
     const regexLower = /[a-z]/;
+    const regexDigit = /[0-9]/;
     if (
       !regexUpper.test(data.password) ||
       !regexLower.test(data.password) ||
+      !regexDigit.test(data.password) ||
       data.password.length < 6
     ) {
       Swal.fire({
         title: 'Opps! ',
-        text: 'Password must contain at least one uppercase letter,one lowercase letter, and be at least 6 characters long',
+        text: 'Password must contain at least one uppercase letter,one lowercase letter, one digit and be at least 6 characters long',
         icon: 'error',
         confirmButtonText: 'OK'
       })
@@ -60,7 +62,7 @@ function Register() {
     } catch (error) {
       Swal.fire({
         title: 'Sign Up failed',
-        text: 'please field data correctly',
+        text: 'User olrady exist',
         icon: 'error',
         confirmButtonText: 'OK'
       })

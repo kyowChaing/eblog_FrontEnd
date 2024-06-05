@@ -12,6 +12,8 @@ import AuthProvider from './Components/Providers/AuthProvider.jsx'
 import Register from './Components/User/Register.jsx'
 import AllBlogs from './Components/AllBlogs/AllBlogs.jsx'
 import AddBlog from './Components/AddBlog/AddBlog.jsx'
+import UpdateBlog from './Components/UpdateBlog/UpdateBlog.jsx'
+import RoutProtect from './Components/PrivatRout/RoutProtect.jsx'
 const router = createBrowserRouter([
   {
     path: '/',
@@ -28,7 +30,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/wishlist',
-        element: <WishList></WishList>
+        element: <RoutProtect><WishList></WishList></RoutProtect>
       },
       {
         path: '/signup',
@@ -45,6 +47,11 @@ const router = createBrowserRouter([
       {
         path: '/addblog',
         element: <AddBlog></AddBlog>
+      },
+      {
+        path: '/updateblog/:id',
+        element: <UpdateBlog></UpdateBlog>,
+        loader: ({params})=> fetch(`http://localhost:5000/allblogs/${params.id}`)
       },
     ]
   }

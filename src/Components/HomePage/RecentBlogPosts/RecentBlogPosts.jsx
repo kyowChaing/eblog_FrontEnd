@@ -11,7 +11,7 @@ import { useContext } from 'react';
 import Swal from 'sweetalert2';
 
 
-const queryClient = new QueryClient()
+const queryClient = new QueryClient();
 
 
 function RecentBlogPosts() {
@@ -87,10 +87,12 @@ function Example() {
 
     if (error) return 'An error has occurred ' 
 
+    const firstSixItems = data.slice(0, 6);
+
     return (
         <div className=" grid border-zinc-100 p-5 rounded-lg gap-2 lg:grid-cols-3 md:grid-cols-2 justify-evenly">
             {
-                data.map(blogpost => (
+                firstSixItems.map(blogpost => (
 
 
                     <Card
