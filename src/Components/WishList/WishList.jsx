@@ -25,7 +25,7 @@ function WishList() {
     )
 }
 
-    function Example() {
+function Example() {
 
 const {user}=useContext(AuthContext);
 const [wishLists, setWishList]=useState();
@@ -57,7 +57,8 @@ if (isPending) return (
 
 if (error) return 'An error has occurred ' 
 
-const handleDelete=(_id)=>{
+const handleDelete=_id=>{
+
     Swal.fire({
         title: "Are you sure?",
         // text: "You won't be able to revert this!",
@@ -66,20 +67,21 @@ const handleDelete=(_id)=>{
         confirmButtonColor: "#3085d6",
         cancelButtonColor: "#d33",
         confirmButtonText: "Yes, Remove it!"
-      }).then((result) => {
+      }).then(result => {
         if (result.isConfirmed) {
             fetch(`http://localhost:5000/wishlist/${_id}`,{
-            method:'DELETE'
+            method:'DELETE',
         })
         .then(res=>res.json())
         .then(data=>{
             if(data.deletedCount>0){
-                refetch();
+                
                 Swal.fire({
                     title: "REMOVE!",
                     text: "Remove Success from WishList.",
                     icon: "success"
-                  });    
+                  });  
+                  refetch();  
             }
         })  
       }

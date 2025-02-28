@@ -9,6 +9,7 @@ import {
 import { AuthContext } from '../../Providers/AuthProvider';
 import { useContext } from 'react';
 import Swal from 'sweetalert2';
+import axios from "axios";
 
 
 const queryClient = new QueryClient();
@@ -28,14 +29,24 @@ function Example() {
 
    const {user} = useContext(AuthContext);
 
-    const { isPending, error, data } = useQuery({
+    const { isPending, isError, data,error } = useQuery({
         queryKey: ['repoData'],
         queryFn: () =>
-            fetch('http://localhost:5000/allblogs').then((res) =>
+            fetch('http://localhost:5000/allblogs') 
+            .then((res) =>
                 res.json(),
             ),
     })
 
+    if (isError) {
+        return <span>Error: {error.message}</span>
+      }
+
+    //   const fetchUsers = async () => {
+    //     const { data } = await axios.get("http://localhost:5000/allblogs");
+    //     return data;
+    //   };
+      
   //get current date and time
     const getCurrentDateTime = () => {
         const currentDate = new Date();
@@ -55,7 +66,7 @@ function Example() {
         })
         .then(res=>res.json())
         .then(data=>{
-        //   console.log(data);
+        console.log(data);
         Swal.fire({
             title: `${title} Blog`,
             text: 'Added Success into Wishlist',
@@ -85,7 +96,7 @@ function Example() {
         </div>
       );
 
-    if (error) return 'An error has occurred ' 
+    //if (error) return 'An error has occurred ' 
 
     const firstSixItems = data.slice(0, 6);
 
